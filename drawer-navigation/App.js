@@ -10,15 +10,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { NavigationContainer } from "@react-navigation/native";
 import { DrawerItemList, createDrawerNavigator } from "@react-navigation/drawer";
 import User from "./assets/user.jpg";
-import Backups from "./screens/Backups";
-import Categories from "./screens/Categories";
-import Contact from "./screens/Contact";
-import Customize from "./screens/Customize";
-import GetPremium from "./screens/GetPremium";
+import Contacto from "./screens/Contacto";
+import Peron from "./screens/Peron";
+import Noticas from "./screens/Noticias";
 import Home from "./screens/Home";
-import RateApp from "./screens/RateApp";
-import Settings from "./screens/Settings";
-import Timer from "./screens/Timer";
+import Evita from "./screens/Evita";
+import Calendario from "./screens/Calendario";
+import Verdades from "./screens/Verdades";
 
 const Drawer = createDrawerNavigator();
 
@@ -55,13 +53,13 @@ export default function App() {
                       fontWeight: "bold",
                       color: "#111"
                     }}
-                  >Isabella Joanna</Text>
+                  >Filosofia Peronista</Text>
                   <Text
                     style={{
                       fontSize: 16,
                       color: "#111"
                     }}
-                  >Product Manager</Text>
+                  ></Text>
                 </View>
                 <DrawerItemList {...props} />
               </SafeAreaView>
@@ -97,95 +95,71 @@ export default function App() {
           component={Home}
         />
         <Drawer.Screen
-          name="Timer"
+          name="Calendario"
           options={{
-            drawerLabel: "Timer",
-            title: "Timer",
+            drawerLabel: "Calendario",
+            title: "Calendario",
             drawerIcon: () => (
               <MaterialIcons name="timer" size={20} color="#808080" />
             )
           }}
-          component={Timer}
+          component={Calendario}
         />
         <Drawer.Screen
-          name="Categories"
+          name="Verdades"
           options={{
-            drawerLabel: "Categories",
-            title: "Categories",
+            drawerLabel: "Verdades",
+            title: "Verdades",
             drawerIcon: () => (
               <MaterialIcons name="category" size={20} color="#808080" />
             )
           }}
-          component={Categories}
+          component={Verdades}
         />
         <Drawer.Screen
-          name="Customize"
+          name="Peron"
           options={{
-            drawerLabel: "Customize",
-            title: "Customize",
+            drawerLabel: "Peron",
+            title: "Peron",
             drawerIcon: () => (
               <MaterialIcons name="dashboard-customize" size={20} color="#808080" />
             )
           }}
-          component={Customize}
+          component={Peron}
         />
         <Drawer.Screen
-          name="Settings"
+          name="Evita"
           options={{
-            drawerLabel: "Settings",
-            title: "Settings",
+            drawerLabel: "Evita",
+            title: "Evita",
             drawerIcon: () => (
               <SimpleLineIcons name="settings" size={20} color="#808080" />
             )
           }}
-          component={Settings}
+          component={Evita}
         />
 
         <Drawer.Screen
-          name="Backups"
+          name="Noticas"
           options={{
-            drawerLabel: "Backups",
-            title: "Backups",
-            drawerIcon: () => (
-              <MaterialIcons name="backup" size={20} color="#808080" />
-            )
-          }}
-          component={Backups}
-        />
-
-        <Drawer.Screen
-          name="Get Premium"
-          options={{
-            drawerLabel: "Get Premuim",
-            title: "Get Premium",
+            drawerLabel: "Noticas",
+            title: "Noticas",
             drawerIcon: () => (
               <MaterialCommunityIcons name="certificate" size={20} color="#808080" />
             )
           }}
-          component={GetPremium}
+          component={Noticas}
         />
         <Drawer.Screen
-          name="Rate this App"
+          name="Contacto"
           options={{
-            drawerLabel: "Rate this App",
-            title: "Rate this App",
-            drawerIcon: () => (
-              <FontAwesome name="star" size={20} color="#808080" />
-            )
-          }}
-          component={RateApp}
-        />
-
-        <Drawer.Screen
-          name="Contact"
-          options={{
-            drawerLabel: "Contact",
-            title: "Contact",
+            drawerLabel: "Contacto",
+            title: "Contacto",
             drawerIcon: () => (
               <MaterialCommunityIcons name="message-alert-outline" size={20} color="#808080" />
             )
           }}
-          component={Contact}
+          component={Contacto}
         />
       </Drawer.Navigator>
     </NavigationContainer>

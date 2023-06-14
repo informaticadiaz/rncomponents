@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Contact() {
+export default function Verdades() {
   return (
     <View style={{flex: 1, alignItems: "center", justifyContent: "center"}} >
-      <Text>Contact</Text>
+      <Text>Verdades</Text>
     </View>
   )
 }
