@@ -1,5 +1,5 @@
 import "react-native-gesture-handler";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, ScrollView } from "react-native";
 import {
   SimpleLineIcons,
   MaterialIcons,
@@ -27,17 +27,9 @@ export default function App() {
         drawerContent={
           (props) => {
             return (
-              <SafeAreaView>
-                <View
-                  style={{
-                    height: 200,
-                    width: '100%',
-                    justifyContent: "center",
-                    alignItems: "center",
-                    borderBottomColor: "#f4f4f4",
-                    borderBottomWidth: 1
-                  }}
-                >
+              <SafeAreaView >
+                <ScrollView>
+                <View>
                   <Image
                     source={User}
                     style={{
@@ -62,7 +54,9 @@ export default function App() {
                   ></Text>
                 </View>
                 <DrawerItemList {...props} />
+                </ScrollView>
               </SafeAreaView>
+
             )
           }
         }
